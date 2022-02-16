@@ -25,5 +25,5 @@ Select g.g_name, g.g_cost, o.ord_datetime FROM Gods g
 JOIN orders o
 ON ord_an = g.g_id
 WHERE o.ord_datetime
-BETWEN '01.05.2021'.
-AND g_price =< 500. 
+BETWEN '01.05.2021'
+AND g_price =< 500; 
