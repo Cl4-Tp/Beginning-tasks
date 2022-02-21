@@ -1,0 +1,17 @@
+Хозяин компютерного магазина хочет знать все готовые готовые компьютеры, по всем производителям, у которых SSD диск не менее 500гб, так же их сорость по порядку.
+Что бы вывело только производитель и SSD.
+
+(
+Структура таблиц:
+
+Таблица product:
+maker(производитель), model,type
+
+Таблица computers:
+code, model, speed, ram, ssd, cd, price
+
+Решение:
+SELECT maker, speed from computers 
+INNER JOIN ( SELECT * from product where type = 'computers')
+Alias on computers.model = Alias.model where ssd >= 500
+GROUP BY marker,speed;
